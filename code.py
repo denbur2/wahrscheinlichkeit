@@ -26,8 +26,9 @@ while True:
         ratecounter += 1
 
     #raten2
-    kurzregister = (sorted(register, key=lambda x:x[1]))
-    if kurzregister[0][1] == gewürfelt:
+    kurzregister = sorted(register, key=lambda x:x[1])
+    print(kurzregister[0][0], gewürfelt)
+    if kurzregister[0][0] == gewürfelt:
         ratecounter2 += 1
     #mit wahrscheinlichkeit raten
 
@@ -39,6 +40,6 @@ while True:
     print("würfelcounter:", würfelcounter)
     print("register: ",register)
 
-
-    time.sleep(1)
+    if würfelcounter>=1000:
+        break
     os.system('cls')
